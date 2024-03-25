@@ -433,7 +433,7 @@ footer .line-footer p a {
   margin: 10px 15px;
 }
 
-ul li a i {
+ ul li a i {
   padding: 0 5px;
   justify-content: center;
   align-items: center;
@@ -445,6 +445,22 @@ ul li a {
   cursor: pointer;
   font-style: 18px;
 }
+
+a img {
+  display: inline-flex;
+  width: 150px;
+  height: 150px;
+  box-sizing: border-box;
+  margin: 0 5em;
+}
+
+#fale {
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+
 
 .btn-abrir-menu{
   display: none;
@@ -568,6 +584,22 @@ footer button:hover {
   }
 
   .btn-abrir-menu{
-    display: block;
-}
+    display: block;   
+  }
+
+  a img {
+    display: inline-flex;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    margin: 10px 0 0 0;
+  }
+  
+  #fale {
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin: 20px;
+  }
+
 }
