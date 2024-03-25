@@ -9,6 +9,9 @@ html {
   scroll-behavior: smooth; /* Adiciona uma transição suave à rolagem */
 }
 
+p {
+  font-size: 1em;
+}
 
 body {
   background-color: black;
@@ -48,7 +51,7 @@ h2.titulo {
 }
 
 h2.titulo span { 
-  color: chartreuse;
+  color: green;
 }
 
 button:hover, form .btn-enviar input:hover {
@@ -242,6 +245,7 @@ section.especialidade .flex {
 .especialidades-box h3 {
   font-size: 28px;
   margin: 15px 0;
+  color: greenyellow;
 }
 
 section.sobre {
@@ -430,8 +434,9 @@ footer .line-footer p a {
 }
 
 ul li a i {
-  padding: 0 15px;
-
+  padding: 0 5px;
+  justify-content: center;
+  align-items: center;
 }
 
 ul li a {
@@ -479,15 +484,16 @@ footer button:hover {
     line-height: 30px;
   }
 
+  p {
+    font-size: 1.2em;
+    text-align: left;
+  }
+
   .topo-do-site .img-topo-site img{
     position: relative; /*O top, left e etc só funciona se o elemento estiver uma posição diferente de static/padão (abolute, fixed ou relative)*/
     animation: flutuar 1.5s ease-in-out infinite alternate; /*2s para concluir - velocidade para ser fluida começa e termina suave fica rápida no meio - Alternando para ficar em loop*/
     margin-bottom: 14px;
     margin-top: -10;
-  }
-
-  .menu-desktop, .btn-contato {
-    display: none; /*retirar o menu, contato*/
   }
 
 
