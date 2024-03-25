@@ -589,8 +589,8 @@ footer button:hover {
 
   a img {
     display: inline-flex;
-    width: 100px;
-    height: 100px;
+    width: 30px;
+    height: 30px;
     box-sizing: border-box;
     margin: 10px 0 0 0;
   }
