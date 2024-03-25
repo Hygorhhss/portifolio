@@ -6,38 +6,189 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Angkor&family=Bebas+Neue&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <title>Portifolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="menu.js" defer></script> <!--carregar o script quando a página estiver carregada-->
 </head>
 <body>
     
 
     <header>
         <div class="interface">
-            <div class="logo">
-                <a href="">
-                    <img src="" alt="">
-                </a>
-            </div>
-
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Sobre Mim</a></li>
-                    <li><a href="">Habilidades</a></li>
-                    <li><a href="">Projetos</a></li>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre">Sobre mim</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#projeto">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
-
-            <div class="btn-contato">
-                <a href="">
+            <!--<div class="btn-contato">
+                <a href="#">
                     <button>Contato</button>
                 </a>
+            </div>-->
+
+            <div class="btn-abrir-menu" id="btn_menu">
+                <i class="bi bi-list"></i>
             </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x"></i>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#sobre">Sobre mim</a></li>
+                        <li><a href="#habilidades">Habilidades</a></li>
+                        <li><a href="#projeto">Projetos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="overlay-menu" id="overlay-menu"></div>
 
         </div>
     </header>
 
+    <main>
+        <section id="inicio" class="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>OLÁ, BEM VINDO AO MEU <span>PORTFÓLIO</span></h1>
+                        <h1>SOU DESENVOLVEDOR FRONT-END<span>.</span></h1>
+                        
+                    </div>
+                    <div class="img-topo-site">
+                        <img src="imagens/image_2 (1).png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+  
+        <section id="sobre" class="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre">
+                        <img src="imagens/1673653703318.jpeg" alt="">
+                    </div>
+                    <div class="txt-sobre">
+                        <h2>
+                            MUITO PRAZER, <br> ME CHAMO
+                            <span style="display: inline;">HYGOR</span></h2>
+                            <p>&#x1F393 Cursando Análise e Desenvolvimento de Sistemas.</p>
+                            <p>&#x1F4A1 Interesse em Desenvolvimento Front end.</p>
+                            <p>&#x1F9E0 Tenho conhecimento em HTML5, CSS3, Javascript Gihutb e GIT.</p>
+                            <p>&#x1F680 Buscando minha primeira oportunidade para atuar como desenvolvedor.</p>
+
+                            <div class="btn-contato">
+                                <a href="https://drive.google.com/file/d/1zku8GdAtimHitkf3EoQS8A44YxvfNKs1/view?usp=sharing" download="file/pdf" type="application/pdf" target="_blank">
+                                    <button>Curriculo</button>
+                                </a>
+
+                            </div>
+                            <!--<div class="btn-social">
+                                <a href=""><button><i class="bi bi-instagram"></i></button></a>
+
+                                <a href=""><button><i class="bi bi-youtube"></i></button></a>
+
+                                <a href=""><button><i class="bi bi-linkedin"></i></button></a>
+                            </div>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="especialidade">
+            <div class="interface">
+                <h2 class="titulo">MINHAS <span>HABILIDADES</span></h2>
+                <div class="flex"> <!--Um elemento do lado do outro-->
+                    <div class="especialidades-box">
+                        <i class="bi bi-filetype-html"></i>
+                        <h3>HTML5</h3>
+                        <p>Possuo habilidades em HTML5, o que me permite criar estruturas de páginas bem organizadas e semânticas. Estou familiarizado com os princípios de SEO, o que possibilita que a página seja amigável para o usuário e para os motores de busca. Além disso, utilizo frameworks e bibliotecas HTML, como o Bootstrap, para criar layouts responsivos e estilizados de maneira eficiente.</p>
+                    </div>
+
+                    <div class="especialidades-box">
+                        <i class="bi bi-filetype-css"></i>
+                        <h3>CSS3</h3>
+                        <p>Tenho uma base sólida em CSS, que permite estilizar páginas da web de forma eficiente e visualmente atraente. Possuo habilidades sólidas na utilização de seletores CSS, propriedades de estilo e unidades de medida para controlar o layout, cores, fontes e espaçamento em elementos HTML. Estou constantemente aprimorando minhas habilidades para criar páginas responsivas e flexíveis de maneira eficaz.</p>
+                    </div>
+
+                    <div class="especialidades-box">
+                        <i class="bi bi-filetype-js"></i>
+                        <h3>Javascript</h3>
+                        <p>Atualmente, estou estudando JavaScript para a criação de páginas interativas e dinâmicas. Busco aprimorar a manipulação do DOM, eventos, funções e estruturas de controle, assim como o assíncronismo, a manipulação de arrays e objetos, e o uso de APIs para consumo de dados externos. Isso me permite criar comportamentos interativos e reativos em páginas web. Dessa forma, tenho a facilidade de fazer uso de bibliotecas e frameworks JavaScript, como React, para agilizar o desenvolvimento e criar aplicações mais complexas e escaláveis."</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="projeto" class="portifolio">
+            <div class="interface">
+                <h2 class="titulo">MEU <span>PORTIFÓLIO</span></h2>
+                <div class="flex">
+                    <div class="img-port" style="background-image: url('imagens/neom-xhMz5xIbhRg-unsplash.jpg')">
+                        <div class="overlay">Projeto 1</div>
+                    </div>
+
+                    <div class="img-port" style="background-image: url('imagens/image_0\ \(2\).png')">
+                        <div class="overlay">Projeto 2</div>
+                    </div>
+
+                    <div class="img-port" style="background-image: url('imagens/1673653703318.jpeg')">
+                        <div class="overlay">Projeto 3</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="formulario">
+            <div class="interface">
+                <div class="flex" style="display: block;">
+                    <h2 class="titulo">FALA <span>COMIGO</span></h2>
+                    
+                    <div>
+                        <ul>
+                            <li><a href="https://github.com/Hygorhhss" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-github"></i>
+                                <p>Github</p></a>
+                            </li>
+
+                            <li><a href="https://www.linkedin.com/in/hygor-henrique-silva-santos-73811b195/" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-linkedin"></i>
+                                <p>Linkedin</p></a>
+                            </li>
+
+                            <li><a href="mailto:hygorhhss@outlook.com" target="_blank" rel="noopener noreferrer"> 
+                                <i class="bi bi-envelope"></i>
+                                <p>hygorhhss@outlook.com</p></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+            <div class="line-footer borda">
+            </div>
+            <button onclick="topFunction()" id="scrollBtn" title="Go to top">&#8593;</button>
+    <!-- Restante do seu conteúdo aqui -->
+    </footer>
 
 </body>
 </html>

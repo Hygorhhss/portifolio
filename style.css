@@ -1,10 +1,14 @@
-
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: 'Poppins', 'sans-serif';
 }
+
+html {
+  scroll-behavior: smooth; /* Adiciona uma transição suave à rolagem */
+}
+
 
 body {
   background-color: black;
@@ -16,6 +20,42 @@ body {
   margin: 0 auto;
 }
 
+.flex {
+  display: flex;
+}
+
+.btn-contato button {
+  padding: 10px 40px;
+  margin: 20px 0 ;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: green;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.btn-contato button:hover {
+  box-shadow: 0px 0px 8px rgb(51, 255, 0);
+  transform: scale(1.05);
+}
+
+h2.titulo {
+  color: white;
+  font-size: 38px;
+  text-align: center;
+}
+
+h2.titulo span { 
+  color: chartreuse;
+}
+
+button:hover, form .btn-enviar input:hover {
+  box-shadow: 0px 0px 8px rgb(255, 4, 4);
+  transform: scale(1.05);
+}
+
 header {
   padding: 40px 4%;
 }
@@ -23,7 +63,8 @@ header {
 header > .interface {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  text-align: center;
+  justify-content: space-around;
 }
 
 header a {
@@ -32,9 +73,10 @@ header a {
   display: inline-block; /*para ativar o transform: scale
   necessário ser um display: inline-block pois a tag <a> é inline*/
   transition: .2s;
+  font-size: 18px;
 }
 
-header a:hover {
+header nav.menu-desktop a:hover {
   color: white;
   transform: scale(1.20);
 }
@@ -43,22 +85,463 @@ header nav ul {
   list-style-type: none;
 }
 
-header nav ul li {
+header nav.menu-desktop ul li {
   display: inline-block;
   padding: 0 40px;
 }
 
-
-header .btn-contato button {
-  padding: 10px 40px;
-  font-size: 18px;
-  font-weight: 600;
-  background-color: red;
-  border: 0;
-  border-radius: 30px;
-  cursor: pointer; /*Cursor com ponteiro*/ 
-}
-
 header .btn-contato button:hover {
   box-shadow: 0px 0px 8px rgba(255, 0, 0, 0.342);
+}
+
+/*ESTILO MENU MOBILE*/
+
+.btn-abrir-menu i{
+  color: green;
+  font-size: 40px;
+}
+
+.menu-mobile {
+  background-color: rgb(0, 0, 0);
+  height: 100vh;
+  position: fixed; /*retirar o menu do fluxo da página "flutuando"*/
+  top: 0;
+  right: 0;
+  z-index: 99990; /*determina quem vai ficar por cima de todos os outros elementos*/
+  width: 0%;
+  overflow: hidden; /*nenhum item fica do lado de fora*/
+  transition: .5s;
+}
+
+.menu-mobile.abrir-menu { /*Usando a classe criado no js determinar o que vai acontecer após o click e abrir o menu*/
+  width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{ /*em overlay-menu está como display none / agora ao clicar o fundo fica escuro acompanhando a configuração acima*/
+  display: block;
+}
+
+.menu-mobile .btn-fechar {
+  padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i{
+  color: green;
+  font-size: 30px;
+
+}
+
+.menu-mobile nav ul{
+  text-align: right;
+}
+
+.menu-mobile nav ul li a{
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 20px 4%;
+  display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+  background-color: green;
+  color: black;
+}
+
+.overlay-menu {
+  background-color: rgba(0, 0, 0, 0.603);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8888; /*número menor do menu lateral para sobrepor só o conteudo*/
+  display: none; /*aparecer só quando o display mobile abrir*/
+}
+
+
+section.topo-do-site {
+  padding: 40px 4%;
+}
+
+
+section.topo-do-site .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.topo-do-site h1{
+  color: white;
+  font-size: 42px;
+  line-height: 45px;
+  justify-content: center;
+  align-items: center;
+}
+
+.topo-do-site .txt-topo-site h1 span  {
+  color: green;
+}
+
+.topo-do-site .txt-topo-site p {
+  color: white;
+  margin: 40px 0px;
+
+}
+
+.img-topo-site img {
+  width: 600px;
+  height: 600px;
+  border-top-left-radius: 35%;
+  border-bottom-right-radius: 35%;
+  border-top-right-radius: 4%;
+  border-bottom-left-radius: 4%;
+}
+
+.topo-do-site .img-topo-site img{
+  position: relative; /*O top, left e etc só funciona se o elemento estiver uma posição diferente de static/padão (abolute, fixed ou relative)*/
+  animation: flutuar 1.7s ease-in-out infinite alternate; /*2s para concluir - velocidade para ser fluida começa e termina suave fica rápida no meio - Alternando para ficar em loop*/
+}
+
+@keyframes flutuar { /*informar o estado inicial a distancia de 0% - Quando a animação chegar em 100% tiver acabado, o top vai ser de 30px - */
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 30px;
+  }
+}
+
+section.especialidade {
+  padding: 40px 4%;
+  box-shadow: 0px 0px 40px 8px rgba(255, 255, 255, 0.075);
+}
+
+section.especialidade .flex {
+  gap: 40px;
+}
+
+.especialidades-box {
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  margin-top: 45px;
+  transition: .2s; /*Tempo de transição ao passar o mouse*/
+}
+
+.especialidades-box:hover {
+  transform: scale(1.05); /*transdormação do elemento ao passar o mouse*/
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.466);
+}
+
+.especialidades-box i {
+  font-size: 70px;
+  color: yellowgreen;
+}
+
+.especialidades-box h3 {
+  font-size: 28px;
+  margin: 15px 0;
+}
+
+section.sobre {
+  padding: 80px 4%;
+}
+
+.img-sobre img {
+  margin: 40px auto;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+}/*arrumar imagem*/
+
+section.sobre .flex { /*centralizar texto na imagem e respiro*/
+  align-items: center;
+  gap: 60px;
+}
+
+.sobre .txt-sobre {
+  color: white;
+}
+
+.sobre .txt-sobre h2{
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.sobre .txt-sobre h2 span{
+  color: green;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.sobre .txt-sobre p {
+  margin: 20px 0;
+  text-align: justify;
+}
+
+.btn-social ul li button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: green;
+  font-size: 22px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: .2s;
+
+}
+
+
+section.portifolio {
+  padding: 80px 4%;
+  box-shadow: 0px 0px 40px 10px rgba(255, 255, 255, 0.116);
+}
+
+section.portifolio .flex{
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.img-port {
+  width: 360px;
+  height: 460px;
+  background-size: cover;
+  background-position:100% 0%; /*Posicionamente horizontal - 0% começa no topo */
+  transition: 8s;
+  cursor: pointer;
+  border-radius: 40px;
+  position: relative;
+}
+
+.img-port:hover { /*Criar efeito de rolagem - de ir até o final ao passar o mouse*/
+  background-position:100% 100%;
+
+}
+
+.overlay {
+  position: absolute; /*Só irá funcionar dentro do img-port*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.548);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  opacity: 0; /*opacidade*/
+  transition: .5s;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+section.formulario {
+  padding: 80px 4%;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /*direção em coluna*/
+  gap: 10px;
+  margin-top: 40px;
+}
+
+form input, form textarea { /*todos os campos de texto*/
+  width: 100%;
+  background-color: rgba(97, 97, 97, 0.849);
+  border: 0;
+  outline: 0; /*Tirar a borda ao clicar no campo*/
+  padding: 20px 15px;
+  border-radius: 15px;
+  color: white;
+  font-size: 18px;
+}
+
+/* MUDAR A COR DO TEXTO NO PLACEHOLDER
+form input::placeholder {
+  color: green;
+}*/
+
+form textarea { /*tirar o redirecionamento do textarea para não quebrar o site*/
+  resize: none;
+  height: 130px;
+}
+
+form .btn-enviar {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/*form .btn-enviar input [type=submit] /*para declara com um tipo especifico de input é */
+
+form .btn-enviar input {
+  width: 120px;
+  background-color: green;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .2s;
+}
+
+
+footer {
+  padding: 40px 4%;
+  box-shadow: 0px 0px 40px 10px rgba(255, 255, 255, 0.116);
+}
+
+footer .flex {
+  justify-content: space-between; /*Propriedade só funciona com elementos com (display:flex)*/ 
+}
+
+footer .line-footer {
+  padding: 20px 0;
+}
+
+.borda {
+  border-top: 2px solid green;
+}
+
+footer .line-footer p i{
+  color: green;
+  font-size: 22px;
+}
+
+footer .line-footer p a {
+  color: white;
+}
+
+.formulario ul li a {
+  color: white;
+  justify-content: center;
+  display: flex;
+  padding: 15px;
+  margin: 10px 15px;
+}
+
+ul li a i {
+  padding: 0 15px;
+
+}
+
+ul li a {
+  max-width: 100vw;
+  text-decoration: none;
+  cursor: pointer;
+  font-style: 18px;
+}
+
+.btn-abrir-menu{
+  display: none;
+}
+
+@media screen and (max-width: 1020px) {
+  .flex {
+    flex-direction: column; /*inverter a imagem com o texto*/
+  }
+
+  .topo-do-site .flex {
+    flex-direction: column-reverse; /*inverter somente a img e texto inicial*/
+  }
+
+  h2.titulo {
+    font-size: 34px;
+    line-height: 30px;
+  }
+
+  .topo-do-site .img-topo-site img{
+    position: relative; /*O top, left e etc só funciona se o elemento estiver uma posição diferente de static/padão (abolute, fixed ou relative)*/
+    animation: flutuar 1.5s ease-in-out infinite alternate; /*2s para concluir - velocidade para ser fluida começa e termina suave fica rápida no meio - Alternando para ficar em loop*/
+    margin-bottom: 14px;
+    margin-top: -10;
+  }
+
+  .menu-desktop, .btn-contato {
+    display: none; /*retirar o menu, contato*/
+  }
+
+
+  section.topo-do-site .flex {
+    gap: 40px;
+  }
+
+  section.topo-do-site {
+    padding: 20px 8%;
+  }
+
+  .topo-do-site h1{
+    font-size: 30px;
+  }
+
+  .topo-do-site .img-topo-site img{
+    width: 100%;
+    height: 100%;
+  }
+
+  section.especialidade {
+    padding: 40px 8%;
+  }
+
+  section.sobre {
+    padding: 80px 8%;
+  }
+
+  .sobre .txt-sobre h2 {
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    margin-top: -23px;
+    margin-bottom: 30px;
+  }
+
+  .img-sobre img {
+    margin: 0px auto;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+  }/*arrumar imagem*/
+
+  section.portifolio {
+    padding: 80px 8%; 
+  }
+
+  .img-port {
+    width: 100%; /*Se adapta ao tamanho da tela menor / ou aplica maw-width podendo esticar a imagem*/
+    height: 460px;
+    /*margin: 10px auto;opção para centralizar o portifolio ou o abaixo com gap*/
+  }
+
+  section.portifolio .flex {
+    gap: 25px;
+  }
+
+  .logo-footer img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    margin-top: -15px;
+  }
+
+  footer .flex {
+    flex-direction: column;
+  }
+
+  footer .line-footer {
+    text-align: center;
+  }
+
+  .btn-abrir-menu{
+    display: block;
+}
 }
