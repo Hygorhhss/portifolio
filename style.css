@@ -445,6 +445,26 @@ ul li a {
   display: none;
 }
 
+footer button{
+  padding: 30px;
+  padding: 10px 40px;
+  margin: 20px 0 ;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: green;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: .2s;
+
+}
+
+
+footer button:hover {
+  box-shadow: 0px 0px 8px rgb(51, 255, 0);
+  transform: scale(1.05);
+}
+
 @media screen and (max-width: 1020px) {
   .flex {
     flex-direction: column; /*inverter a imagem com o texto*/
