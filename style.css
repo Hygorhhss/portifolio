@@ -589,16 +589,8 @@ footer button:hover {
 
   a img {
     display: block;
-    width: 30px;
-    height: 30px;
-    box-sizing: border-box;
-  }
-  
-  #fale {
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    margin: 20px;
+    width: 10px;
+    height: 10px;
   }
 
 }
