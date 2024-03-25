@@ -588,11 +588,10 @@ footer button:hover {
   }
 
   a img {
-    display: inline-flex;
+    display: block;
     width: 30px;
     height: 30px;
     box-sizing: border-box;
-    margin: 10px 0 0 0;
   }
   
   #fale {
