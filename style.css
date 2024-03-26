@@ -71,7 +71,7 @@ header > .interface {
 }
 
 header a {
-  color: #999898;
+  color: #ffffff;
   text-decoration: none;
   display: inline-block; /*para ativar o transform: scale
   necessário ser um display: inline-block pois a tag <a> é inline*/
