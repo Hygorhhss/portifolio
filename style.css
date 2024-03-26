@@ -501,6 +501,7 @@ footer button:hover {
   h2.titulo {
     font-size: 34px;
     line-height: 30px;
+    margin: 15px;
   }
 
   p {
