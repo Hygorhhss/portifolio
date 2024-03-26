@@ -591,10 +591,11 @@ footer button:hover {
     display: block;   
   }
 
-  a img {
+  #fale a img {
     display: inline-flex;
     width: 50px;
     height: 50px;
+    padding: 0px 15px;
   }
   
   #fale {
