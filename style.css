@@ -10,7 +10,13 @@ html {
 }
 
 p {
-  font-size: 1em;
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+}
+
+p span {
+  margin-right: 10px; /* Espaçamento entre o ícone e o texto */
 }
 
 body {
@@ -46,9 +52,17 @@ body {
 
 h2.titulo {
   color: white;
-  font-size: 38px;
+  font-size: 2.5em;
   text-align: center;
 }
+
+.txt-sobre h2 {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
 
 h2.titulo span { 
   color: green;
@@ -505,8 +519,13 @@ footer button:hover {
   }
 
   p {
-    font-size: 1.2em;
-    text-align: left;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+  }
+
+  p span {
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
   }
 
   .topo-do-site .img-topo-site img{
