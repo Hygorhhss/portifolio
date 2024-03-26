@@ -10,7 +10,13 @@ html {
 }
 
 p {
-  font-size: 1em;
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+}
+
+p span {
+  margin-right: 10px; /* Espaçamento entre o ícone e o texto */
 }
 
 body {
@@ -46,9 +52,17 @@ body {
 
 h2.titulo {
   color: white;
-  font-size: 38px;
+  font-size: 2.5em;
   text-align: center;
 }
+
+.txt-sobre h2 {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
 
 h2.titulo span { 
   color: green;
@@ -433,7 +447,7 @@ footer .line-footer p a {
   margin: 10px 15px;
 }
 
-ul li a i {
+ ul li a i {
   padding: 0 5px;
   justify-content: center;
   align-items: center;
@@ -445,6 +459,22 @@ ul li a {
   cursor: pointer;
   font-style: 18px;
 }
+
+a img {
+  display: inline-flex;
+  width: 150px;
+  height: 150px;
+  box-sizing: border-box;
+  margin: 0 5em;
+}
+
+#fale {
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+
 
 .btn-abrir-menu{
   display: none;
@@ -464,6 +494,9 @@ footer button{
 
 }
 
+header nav.menu-desktop ul li {
+  display: none;
+}
 
 footer button:hover {
   box-shadow: 0px 0px 8px rgb(51, 255, 0);
@@ -482,11 +515,17 @@ footer button:hover {
   h2.titulo {
     font-size: 34px;
     line-height: 30px;
+    margin: 15px;
   }
 
   p {
-    font-size: 1.2em;
-    text-align: left;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+  }
+
+  p span {
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
   }
 
   .topo-do-site .img-topo-site img{
@@ -568,6 +607,27 @@ footer button:hover {
   }
 
   .btn-abrir-menu{
-    display: block;
-}
+    display: block;   
+  }
+
+  #fale a img {
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+  }
+
+  img {
+    margin: 15px;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  #fale {
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+
 }
