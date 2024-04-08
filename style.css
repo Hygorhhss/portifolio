@@ -69,7 +69,7 @@ h2.titulo span {
 }
 
 button:hover, form .btn-enviar input:hover {
-  box-shadow: 0px 0px 8px rgb(255, 4, 4);
+  box-shadow: 0px 0px 3px white;
   transform: scale(1.05);
 }
 
@@ -220,6 +220,53 @@ section.topo-do-site .flex {
   animation: flutuar 1.7s ease-in-out infinite alternate; /*2s para concluir - velocidade para ser fluida começa e termina suave fica rápida no meio - Alternando para ficar em loop*/
 }
 
+.especialidades-box {
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  margin-top: 45px;
+  transition: .2s; /*Tempo de transição ao passar o mouse*/
+  }
+  
+  .especialidades-box:hover {
+  transform: scale(1.05); /*transdormação do elemento ao passar o mouse*/
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.466);
+  }
+  
+  .especialidades-box i {
+  font-size: 70px;
+  color: yellowgreen;
+  }
+  
+  .especialidades-box h3 {
+  font-size: 28px;
+  margin: 15px 0;
+  color: greenyellow;
+  }
+
+  .formulario .redes-sociais {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .formulario .redes-sociais a i {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 26px;
+    transition: 0.3s;
+  }
+
+  .formulario .redes-sociais a i:hover {
+    color: green;
+    border: 1px solid green;
+    transform: scale(1.1);
+  }
+
 @keyframes flutuar { /*informar o estado inicial a distancia de 0% - Quando a animação chegar em 100% tiver acabado, o top vai ser de 30px - */
   0% {
     top: 0;
@@ -238,7 +285,7 @@ section.especialidade .flex {
   gap: 40px;
 }
 
-.especialidades-box {
+.span-box {
   color: white;
   padding: 40px;
   border-radius: 20px;
@@ -246,17 +293,17 @@ section.especialidade .flex {
   transition: .2s; /*Tempo de transição ao passar o mouse*/
 }
 
-.especialidades-box:hover {
+.span-box:hover {
   transform: scale(1.05); /*transdormação do elemento ao passar o mouse*/
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.466);
 }
 
-.especialidades-box i {
+.span-box i {
   font-size: 70px;
   color: yellowgreen;
 }
 
-.especialidades-box h3 {
+.span-box h3 {
   font-size: 28px;
   margin: 15px 0;
   color: greenyellow;
@@ -308,7 +355,6 @@ section.sobre .flex { /*centralizar texto na imagem e respiro*/
   cursor: pointer;
   margin: 0 5px;
   transition: .2s;
-
 }
 
 
@@ -475,12 +521,11 @@ a img {
   margin: 20px;
 }
 
-
 .btn-abrir-menu{
   display: none;
 }
 
-footer button{
+.formulario button{
   padding: 30px;
   padding: 10px 40px;
   margin: 20px 0 ;
@@ -491,7 +536,9 @@ footer button{
   border-radius: 30px;
   cursor: pointer;
   transition: .2s;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 

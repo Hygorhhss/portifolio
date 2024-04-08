@@ -9,6 +9,12 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
+
+
     <title>Portifolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="menu.js" defer></script> <!--carregar o script quando a página estiver carregada-->
@@ -130,8 +136,6 @@
                         <h3>Javascript</h3>
                         <p>Atualmente, estou estudando JavaScript para a criação de páginas interativas e dinâmicas. Busco aprimorar a manipulação do DOM, eventos, funções e estruturas de controle, assim como o assíncronismo, a manipulação de arrays e objetos, e o uso de APIs para consumo de dados externos. Isso me permite criar comportamentos interativos e reativos em páginas web. Dessa forma, tenho a facilidade de fazer uso de bibliotecas e frameworks JavaScript, como React, para agilizar o desenvolvimento e criar aplicações mais complexas e escaláveis."</p>
                     </div>
-
-
                 </div>
             </div>
         </section>
@@ -162,15 +166,27 @@
                 <div class="flex" style="display: block;">
                     <h2 class="titulo">FALE <span>COMIGO</span></h2>
                     
-                    <div id="fale">
-                        <a href="https://github.com/Hygorhhss" target="_blank" rel="noopener noreferrer">
-                        <img src="imagens/github.png" alt="">
-                            
-                        <a href="https://www.linkedin.com/in/hygor-henrique-silva-santos-73811b195/" target="_blank" rel="noopener noreferrer"><img style="border-radius: 55%;" src="imagens/transferir (1).png" alt=""></a>
 
-                        <a href="mailto:hygorhhss@outlook.com" target="_blank" rel="noopener noreferrer"><img style="color: white;" src='imagens/o-email.png'></a>  
+                    <ul class="redes-sociais">
+                        <li>
+                            <a href="https://www.linkedin.com/in/hygor-henrique-s-santos-73811b195/" title="Ir para o LinkedIn" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/5512981925455" title="Enviar Mensagem no Whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Hygorhhss" title="Ir para o GitHub" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
 
-                    </div>
+                    <button class="botao" onclick="topFunction()" id="scrollBtn" title="Página inicial">&#8593;</button>
+
                 </div>
             </div>
         </section>
@@ -178,7 +194,6 @@
 
     <footer>
             <div class="line-footer borda"></div>
-            <button onclick="topFunction()" id="scrollBtn" title="Página inicial">&#8593;</button>
     <!-- Restante do seu conteúdo aqui -->
     </footer>
 
