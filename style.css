@@ -196,6 +196,11 @@ section.topo-do-site .flex {
   align-items: center;
 }
 
+.txt-topo-site h1 { 
+  height: 30%;
+  width: 80%;
+}
+
 .topo-do-site .txt-topo-site h1 span  {
   color: green;
 }
@@ -207,8 +212,8 @@ section.topo-do-site .flex {
 }
 
 .img-topo-site img {
-  width: 600px;
-  height: 600px;
+  width: 510px;
+  height: 510px;
   border-top-left-radius: 35%;
   border-bottom-right-radius: 35%;
   border-top-right-radius: 4%;
