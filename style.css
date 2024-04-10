@@ -272,6 +272,8 @@ section.topo-do-site .flex {
     transform: scale(1.1);
   }
 
+
+
 @keyframes flutuar { /*informar o estado inicial a distancia de 0% - Quando a animação chegar em 100% tiver acabado, o top vai ser de 30px - */
   0% {
     top: 0;
@@ -362,7 +364,6 @@ section.sobre .flex { /*centralizar texto na imagem e respiro*/
   transition: .2s;
 }
 
-
 section.portifolio {
   padding: 80px 4%;
   box-shadow: 0px 0px 40px 10px rgba(255, 255, 255, 0.116);
@@ -374,7 +375,7 @@ section.portifolio .flex{
   margin-top: 50px;
 }
 
-.img-port {
+.img-port{
   width: 360px;
   height: 460px;
   background-size: cover;
@@ -383,14 +384,15 @@ section.portifolio .flex{
   cursor: pointer;
   border-radius: 40px;
   position: relative;
+  column-count: 2;
+  column-gap: 20px;
 }
 
-.img-port:hover { /*Criar efeito de rolagem - de ir até o final ao passar o mouse*/
+.img-port:hover{ /*Criar efeito de rolagem - de ir até o final ao passar o mouse*/
   background-position:100% 100%;
-
 }
 
-.overlay {
+.overlay{
   position: absolute; /*Só irá funcionar dentro do img-port*/
   top: 0;
   left: 0;
@@ -412,8 +414,24 @@ section.portifolio .flex{
   opacity: 1;
 }
 
-section.formulario {
-  padding: 80px 4%;
+.portifolio .btn-pages {
+  padding: 5px 30px;
+  margin: 10px 0 ;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: rgb(177, 177, 177);
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 1.5s;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-pages a {
+  color: white;
+  text-decoration: none;
 }
 
 form {
@@ -635,7 +653,7 @@ footer button:hover {
     padding: 80px 8%; 
   }
 
-  .img-port {
+  .img-port{
     width: 100%; /*Se adapta ao tamanho da tela menor / ou aplica maw-width podendo esticar a imagem*/
     height: 460px;
     /*margin: 10px auto;opção para centralizar o portifolio ou o abaixo com gap*/
